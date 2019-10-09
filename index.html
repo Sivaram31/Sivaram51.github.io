@@ -13,15 +13,58 @@ body {
         background-repeat:no-repeat;
        background-size:cover;
 } 
+
 h1   {color: white;}
 h1   {text-align:center;}
 h1   {font-family:Courier New;} 
 p    {text-align:center;}
 p    {font-family:Courier New;}
 img src {text-align:center;}
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
 
 </style>
-<a href="/about.html">About me</a> <a href="/portfolio.html">Portfolio</a>
+</head>
+
+<div class="dropdown">
+<button class="dropbtn">Menu</button>
+<div class="dropdown-content">
+
+<a href="about.html">About Me</a>
+<a href="portfolio.html">Portfolio</a>
+
+</div>
+</div>
+</style>
 <center>	
 <h1 style="font-size:150px;">Home Page</h1>
 <p style="font-size:15px;">Home sweet home.</p>

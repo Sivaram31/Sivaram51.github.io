@@ -19,8 +19,50 @@ P    {font-size: 20px;}
 figcaption {color:white;}
 figcaption {font-family:Courier New;}
 figcaption {font-size: 18px;}
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
+
 </style>
-<a href="/about.html">About me</a> <a href="index.html">Home</a>
+</head>
+
+<div class="dropdown">
+<button class="dropbtn">Menu</button>
+<div class="dropdown-content">
+
+<a href="about.html">About me</a>
+<a href="index.html">Home</a>
+</div>
+</div>
+</style>
 <h1>Portfolio</h1>
 <center>
 <iframe src="https://scratch.mit.edu/projects/328291554/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>

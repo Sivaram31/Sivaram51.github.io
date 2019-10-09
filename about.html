@@ -11,8 +11,50 @@ h1   {font-family:Courier New;}
 p    {font-family:Courier New;} 
 p    {color:White;}
 p    {font-size: 30px;}
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
+
 </style>
-<a href="index.html">Home</a> <a href="/portfolio.html">Portfolio</a>  
+</head>
+
+<div class="dropdown">
+<button class="dropbtn">Menu</button>
+<div class="dropdown-content">
+
+<a href="index.html">Home</a>
+<a href="portfolio.html">Portfolio</a>
+</div>
+</div>
+</style>
 <h1>About me</h1>
 <p>I was born in Washington. I like to sit outside and think about my life in my spare time. I am interested in watches.My favorite watch company is Grand Seiko.My favorite watch in Grand Seiko is the spring drive snowflake.My favorite rolex watch is the oyster perpetual. </p>
 <img src="https://www.fratellowatches.com/wp-content/uploads/2018/10/Grand-Seiko-Snowflake-SBGA211.014.jpg" width="500" height="333"> <img src="https://s.yimg.com/aah/movadobaby/rolex-oyster-perpetual-datejust-116231-990.jpg" width"300" height=400">
