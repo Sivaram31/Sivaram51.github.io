@@ -55,16 +55,119 @@ p    {font-size: 30px;}
 </div>
 </div>
 </style>
-<h1>About me</h1>
-<p>I was born in Washington. I like to sit outside and think about my life in my spare time. I am interested in watches.My favorite watch company is Grand Seiko.My favorite watch in Grand Seiko is the spring drive snowflake.My favorite rolex watch is the oyster perpetual. </p>
-<img src="https://www.fratellowatches.com/wp-content/uploads/2018/10/Grand-Seiko-Snowflake-SBGA211.014.jpg" width="500" height="333"> <img src="https://s.yimg.com/aah/movadobaby/rolex-oyster-perpetual-datejust-116231-990.jpg" width"300" height=400">
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://s.yimg.com/aah/movadobaby/rolex-oyster-perpetual-datejust-116231-990.jpg" style="width:10%">
+  <div class="text">This is the Rolex oyster perpetual </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://www.fratellowatches.com/wp-content/uploads/2018/10/Grand-Seiko-Snowflake-SBGA211.014.jpg"" style="width:10%">
+  <div class="text">This is the Grand Seiko spring drive snowflake</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
 <iframe width="420" height="315"
 src="https://www.youtube.com/embed/kGOQfLFzJj8">
 </iframe>
-<iframe width="420" height="315"
-src="https://www.youtube.com/embed/0qNmuMrx154">
-</iframe>
-<p>Thank you Kodi for showing me this video.</p>
+  <div class="text">This is motivational lizard.</div>
+</div>
 
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 8000); // Change image every 8 seconds
+}
+</script>
 </body>
 </html>
